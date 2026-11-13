@@ -44,9 +44,35 @@ L'architecture repose sur plusieurs composants :
 - Communication avec le moteur DSP.
 - Accès et gestion des données PostgreSQL.
 
-## 6. Installation
+## 6. Installation & Démarrage
 
-Les instructions détaillées seront complétées après la mise en place de l'environnement Python et des dépendances.
+### Prérequis
+- Python 3.10 ou supérieur
+- PostgreSQL 16 (avec ou sans extension pgvector)
+
+### Installation locale
+```bash
+# 1. Créer un environnement virtuel
+python -m venv venv
+# Sous Windows :
+venv\Scripts\activate
+# Sous Linux/Mac :
+source venv/bin/activate
+
+# 2. Installer les dépendances
+pip install -r requirements.txt
+
+# 3. Configurer l'environnement
+cp .env.example .env
+# Adapter les variables dans .env (DB_USER, DB_PASSWORD, etc.)
+
+# 4. Lancer le serveur de développement
+uvicorn app.main:app --reload --port 8000
+```
+
+Le serveur démarre immédiatement (< 2 sec) et est accessible sur :
+- **Documentation Swagger UI :** [http://localhost:8000/docs](http://localhost:8000/docs)
+- **Vérification de santé :** [http://localhost:8000/health](http://localhost:8000/health)
 
 ## 7. Configuration
 

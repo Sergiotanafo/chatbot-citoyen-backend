@@ -1,0 +1,34 @@
+# ============================================================
+# Chatbot Citoyen Malien — Backend Dépendances
+# ============================================================
+
+# Framework Web API
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+slowapi>=0.1.9
+python-multipart>=0.0.9
+
+# Base de données & ORM
+sqlalchemy>=2.0.35
+psycopg2-binary>=2.9.10
+alembic>=1.13.0
+
+# Validation et Configuration (compatibles Python 3.10 à 3.13+)
+pydantic>=2.9.2
+pydantic-settings>=2.5.2
+email-validator>=2.1.0
+python-dotenv>=1.0.1
+
+# Sécurité & Authentification
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+bcrypt>=4.1.2
+
+# Client HTTP async
+httpx>=0.27.0
+
+# Communication gRPC avec le DSP
+grpcio>=1.66.0
+protobuf>=5.28.0
+
+
